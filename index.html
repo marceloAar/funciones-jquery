@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <style>
+        div {
+        background: #3d9a44;
+        margin: 3px;
+        width: 80px;
+        height: 80px;
+        float: left;
+        }   
+        .rojo { background-color: red; height: 120px; width: 120px;} 
+    </style>  
+    
+    <script>
+    $(document).ready(function(){    
+                
+       $( "#boton1" ).click(function() {
+           if ( $( "div" ).first().is( ":hidden" ) ) {
+           $( "div" ).show( "slow" );
+       } else {
+           $( "div" ).slideUp();
+       }
+       })
+
+       $( "#boton2" ).click(function() {
+           if ( $( "div" ).first().is( ":hidden" ) ) {
+                $( "div" ).show( "slow" );
+            } else {
+                $( "div" ).hide();
+            }    
+        })
+
+        $( "#boton3" ).click(function() {
+           if ( $( "div" ).first().is( ":hidden" ) ) {
+                $( "div" ).show( "slow" );
+            } else {
+                $( "div" ).slideToggle();
+            }    
+        })
+
+        $( "#boton4" ).click(function() {
+           if ( $( "div" ).first().is( ":hidden" ) ) {
+                $( "div" ).show( "slow" );
+            } else {
+                $( "div" ).fadeOut();
+            }    
+        })
+
+        $("#boton5").click(function(){
+			$("div").addClass("rojo");            
+		});
+
+        $("#boton6").click(function(){
+    		$("body").append("<div>Otro +</div>");
+	});
+      
+    })  
+    </script>    
+   
+
+</head>
+
+<body>
+    <h1 id="contenido">Ejercicio de Funciones JQuery</h1>
+    <input type="button" id="boton1" value="Slide Up">
+    <input type="button" id="boton2" value="Hide">
+    <input type="button" id="boton3" value="Slide Toggle">
+    <input type="button" id="boton4" value="Fade Out">
+    <input type="button" id="boton5" value="Add Class">
+    <input type="button" id="boton6" value="Append">
+    <hr>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+    
+</body>
+</html>
